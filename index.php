@@ -66,11 +66,25 @@ echo json_encode($search);
 
 
      //UPDATE
+	/*
 	$usuario = new Usuario();
 
-	$usuario->loadById(8);
+	$usuario->loadById(11);
 
 	$usuario->update("professor", "234767");
 
 	echo $usuario;
+	*/
+
+	//DELETE
+/**/
+	$usuario = new Usuario();
+
+	$usuario->loadById(10);
+
+	$usuario->delete();
+
+	echo $usuario;
+
+	
 ?>
