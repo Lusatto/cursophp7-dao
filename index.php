@@ -36,11 +36,41 @@ echo json_encode($search);
 */
 
 //carrega um usuario usando li=ogin e senha
+	/*
 	$usuario = new Usuario();
 	$usuario->login("Jose","123456");
 
 	echo $usuario;
+	*/
+
+// INSERT usando procedure
+/*
+	$aluno = new Usuario();
+
+	$aluno->setDeslogin("aluno");
+	$aluno->setDessenha("@lun0");
+
+	$aluno->insert();
+
+	echo $aluno;
+*/
+
+	// INSERT usando procedure + METODO CONSTRUTOR
+/*
+	$aluno = new Usuario("aluno", "@lun2");
+
+	$aluno->insert();
+
+	echo $aluno;
+*/
 
 
+     //UPDATE
+	$usuario = new Usuario();
 
+	$usuario->loadById(8);
+
+	$usuario->update("professor", "234767");
+
+	echo $usuario;
 ?>
